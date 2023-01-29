@@ -27,9 +27,15 @@
 .cart-header{
     display: flex;
    align-items: center;
+   justify-content: space-between;
+   padding: 10px;
+}
+.cart-header p{
+    font-size: 18px;
+    font-weight: 800;
 }
 .cart-thumb{
-    width: calc(100% - 310px);
+    width: calc(100% - 310px)
 }
 .item-container{
     font-size:18px;
@@ -57,5 +63,11 @@ font-weight: 600;
 .item-button{
     border: none;
     background-color: #c2aa97;
+    border-radius:5px;
     margin: 0 10px;
+}
+
+.item-btn-qty{
+    display: flex;
+    align-items: center;
 }

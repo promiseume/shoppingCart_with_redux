@@ -2,9 +2,9 @@ import React,{useState, useEffect }from 'react'
 import {fetchAllProducts} from '../ultility'
 import AllProduct from '../container/product/allProduct'
 import '../container/product/product.css';
-import {useSelector,useDispatch} from "react-redux";
+import {useDispatch} from "react-redux";
 import {cartActions} from "../redux/cartAction"
-
+import Header from '../container/header/header';
 
 export default function Products() {
     const [data,setData]= useState([]);
@@ -23,6 +23,8 @@ export default function Products() {
         },[])  
    
   return (
+  <>
+   <Header/>
     <div className='card-container'>
         {data.map((items) =>  <div key={items.id}>
          <AllProduct id={items.id}
@@ -31,6 +33,6 @@ export default function Products() {
          price={items.price}/>
         </div>)}
     </div>
-    
+    </>
   )
 }

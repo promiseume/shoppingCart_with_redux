@@ -1,16 +1,12 @@
 import React from "react";
-import {useSelector} from "react-redux";
+import './header.css'
 
 const Header = () => {
-  // let total = 0;
-  // const cartList = useSelector ((state) => state.cart.items);
-  // cartList.forEach((item)=>{
-  //   total += item.total
-  // })
+ 
   return (
-    <div>
-      <h3>${total}</h3>
-    </div>
+    <header className='hero-img'>
+      <div className='hero-text'><h1>Welcome To Sauce</h1></div>
+    </header>
   );
 };
 

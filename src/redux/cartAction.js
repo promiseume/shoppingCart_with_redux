@@ -30,6 +30,8 @@ const cart = createSlice({
                     existingItem.quantity++;
                     existingItem.total += newItem.price 
                 }
+                localStorage.setItem("cartItem",JSON.stringify(state.items));
+                 localStorage.setItem("quantity",JSON.stringify(state.totalQuantity))
         },
         removeFromCart(state,action){
 

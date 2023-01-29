@@ -22,8 +22,11 @@ export default function AllProduct({name,id,imageUrl,price}) {
          <div className='des-container'>
         <h1 className='productName'>{name}</h1>
         <p className='productPrice'>${price}</p>
+        </div>
+        <div className='button-cont'>
         <button className='cart-button' onClick={addItem}>Add to cart</button>
         </div>
+
     </section>
   )
 }

@@ -26,9 +26,11 @@ export default function Items({name,price,total,quantity,id,imageUrl}) {
       <div className='item-desc'>
         <h1>{name}</h1>
         <p>Price:{price}</p>
-        <p>Quantity:{quantity}</p>
+        <div className='item-btn-qty'>
+        <p style={{paddingTop:'10px'}}>Quantity:{quantity}</p>
         <button className='item-button' onClick={removeItem}><AiOutlineMinus style={{fontSize:'25px'}}/></button>
         <button className='item-button' onClick={addItem}><AiOutlinePlus style={{fontSize:'25px'}}/></button>
+        </div>
         </div>
         </div>
         <div className='item-price'>

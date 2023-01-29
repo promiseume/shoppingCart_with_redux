@@ -8,7 +8,7 @@
     align-items:center;
     justify-content:space-between;
     padding:0 20px;
-    height:60px;
+    height:70px;
     background-color:#c2aa97;
     width: 100%;
     margin: 0;
@@ -29,7 +29,8 @@
     text-align: center;
 }
 .icon{
-width:30px;
-height: 30px;
+width:40px;
+height: 40px;
 cursor: pointer;
+color:#202020;
 }
