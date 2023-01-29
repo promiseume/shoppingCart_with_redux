@@ -14,10 +14,12 @@ export default function AllProduct({name,id,imageUrl,price}) {
     }
   return (
     <div className='cart'>
+      <div>
         <img src={imageUrl} alt={name}/>
         <h1>{name}</h1>
         <p>${price}</p>
         <button onClick={addItem}>Add to cart</button>
+        </div>
     </div>
   )
 }
