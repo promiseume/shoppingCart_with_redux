@@ -1,6 +1,7 @@
 import React from 'react'
 import {useDispatch} from "react-redux";
-import {cartActions} from "../redux/cartAction"
+import {cartActions} from "../../redux/cartAction"
+import './product.css'
 
 export default function AllProduct({name,id,imageUrl,price}) {
     const dispatch = useDispatch();
@@ -10,16 +11,19 @@ export default function AllProduct({name,id,imageUrl,price}) {
             name,
             id,
             price,
+            imageUrl
         }))
     }
   return (
-    <div className='cart'>
-      <div>
-        <img src={imageUrl} alt={name}/>
-        <h1>{name}</h1>
-        <p>${price}</p>
-        <button onClick={addItem}>Add to cart</button>
+    <section className='cart-item card' style={{width: "19rem", height:'450px'}}>
+      <div className='img-container'>
+        <img className='cartImg card-img-top' src={imageUrl} alt={name}/>
         </div>
-    </div>
+         <div className='des-container'>
+        <h1 className='productName'>{name}</h1>
+        <p className='productPrice'>${price}</p>
+        <button className='cart-button' onClick={addItem}>Add to cart</button>
+        </div>
+    </section>
   )
 }

@@ -1,27 +1,39 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
-import {cartActions} from "../redux/cartAction"
+import {cartActions} from "../../redux/cartAction"
+import './pickedItem.css'
+import {AiOutlinePlus,AiOutlineMinus} from 'react-icons/ai';
 
-export default function Items({name,price,total,quantity,id}) {
+export default function Items({name,price,total,quantity,id,imageUrl}) {
   const dispatch = useDispatch();
   const addItem =()=>{
     dispatch(cartActions.addToCart({
       name,
       id,
-      price
+      price,
+      imageUrl
     }))
   }
   const removeItem =()=>{
     dispatch(cartActions.removeFromCart(id))
   }
   return (
-    <div>
+    <section className='item-container'>
+      <div className='cart-thumb'>
+      <div className='item-image'>
+        <img src={imageUrl} alt={name}/>
+      </div>
+      <div className='item-desc'>
         <h1>{name}</h1>
-        <p>${price}</p>
-        <p>{quantity}</p>
+        <p>Price:{price}</p>
+        <p>Quantity:{quantity}</p>
+        <button className='item-button' onClick={removeItem}><AiOutlineMinus style={{fontSize:'25px'}}/></button>
+        <button className='item-button' onClick={addItem}><AiOutlinePlus style={{fontSize:'25px'}}/></button>
+        </div>
+        </div>
+        <div className='item-price'>
         <p>{total}</p>
-        <button onClick={removeItem}>-</button>
-        <button onClick={addItem}>+</button>
-    </div>
+        </div>
+    </section>
   )
 }

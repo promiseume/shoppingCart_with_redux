@@ -1,24 +1,23 @@
 import React from 'react';
 import {useSelector} from "react-redux";
 import {Routes, Route, Navigate} from "react-router-dom";
-import Header from './container/header';
-import Products from './container/products';
-import Cart from './container/cart';
-import CartItems from './container/cartItems'
+// import Header from './container/header/header';
+import Products from './pages/products';
+import Nav from './container/Nav/nav';
+import CartItems from './pages/cartItems'
 function App() {
   const cartItems = useSelector((state) => state.cart.items);
   
-  return (
-  
-        <div className="container">
-          <Header/>
-          <Cart/>
-          <Products/>
-          <div style={{backgroundColor:'green'}}>
-          <CartItems/>
-          </div>
+  return (<>
+  <Nav/>
+  <div className="container">
+          {/* <Header/> */}
+          <Routes>
+          <Route path={'/'} element={<Products/>}/>
+          <Route path={'/cart'} element={<CartItems/>}/>
+          </Routes>
         </div>
-    
+    </>
   );
 }
 
