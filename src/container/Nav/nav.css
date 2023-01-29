@@ -13,6 +13,14 @@
     width: 100%;
     margin: 0;
 }
+a{
+    text-decoration: none!important;
+
+}
+.nav-container h1{
+    color: #202020;
+    text-decoration: none!important;
+}
 .cart-number{
     position: absolute;
     background-color: #a08a79;
