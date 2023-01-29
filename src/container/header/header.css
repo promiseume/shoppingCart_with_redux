@@ -14,7 +14,12 @@
 } 
 .hero-text h1{
     color: #202020;
-    font-size:5rem!important;
+    font-size:5rem;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+@media(max-width: 769px){
+    .hero-text h1{
+        font-size:2rem;
+    } 
 }

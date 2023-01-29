@@ -71,3 +71,17 @@ font-weight: 600;
     display: flex;
     align-items: center;
 }
+.no-data{
+    text-align: center;
+}
+@media(max-width: 769px){
+    .cart-title{
+        width:50%;
+    }
+    .cart-product-item{
+        display: grid;
+    }
+    .cart-thumb{
+      width:70%
+    }
+}

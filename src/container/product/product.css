@@ -1,5 +1,6 @@
 .cart-item{
    margin: 10px 0;
+   padding: 0 15px;
 }
 .cart-item{
     padding: 0 15px;
@@ -9,7 +10,6 @@
   grid-template-columns: auto auto auto;
   justify-content: center;
   gap: 30px;
-  overflow: visible;
 }
 .img-container{
     width:100%;
@@ -56,4 +56,9 @@
 .cart-button:hover{
     background-color:#b7692a;
 }
-
+@media(max-width: 769px){
+    .card-container{
+      grid-template-columns: auto;
+      gap: 10px;
+    }
+}

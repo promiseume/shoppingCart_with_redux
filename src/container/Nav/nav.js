@@ -7,7 +7,7 @@ export default function Nav() {
     const quantity = useSelector(state => state.cart.totalQuantity)
   return (
     <div className='nav-container sticky-top'>
-        <h1>Sauce</h1>
+        <Link to='/'><h1>Sauce</h1></Link>
         <Link to='/cart'>
         <div className='cart-icons'>
          <AiOutlineShoppingCart className='icon'/>

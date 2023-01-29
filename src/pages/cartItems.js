@@ -12,6 +12,8 @@ export default function CartItems() {
    
   return (
     <section className='container'>
+      {cartItems.length || JSON.parse(localStorage.getItem('cartItem')) ?
+      <>
        <div className='cart-header'>
         <div className='cart-title'><p>Products</p></div>
         <div className='cart-total'><p>Total</p></div>
@@ -32,12 +34,12 @@ export default function CartItems() {
         )}
         </>
   }
-
-        </ul>
+</ul>
         <div>
           <p>Total</p>
           <h3>${total}</h3>
         </div>
+         </>: <div className='no-data'><p>No Product Available yet</p></div>}
     </section>
   )
 }
